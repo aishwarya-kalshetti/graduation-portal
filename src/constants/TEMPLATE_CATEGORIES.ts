@@ -2,7 +2,7 @@ type CategoryMap = {
   [category: string]: string[];
 };
 
-const IDP_CATEGORIES: Readonly<CategoryMap> = {
+const TEMPLATE_CATEGORIES: Readonly<CategoryMap> = {
   Trade: [
     'General Dealer',
     'Spaza Shop',
@@ -55,4 +55,4 @@ const IDP_CATEGORIES: Readonly<CategoryMap> = {
   ],
 } as const;
 
-export default IDP_CATEGORIES;
+export default TEMPLATE_CATEGORIES;

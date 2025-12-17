@@ -1,6 +1,6 @@
-import type { PathwayData } from '@app-types/screens';
+import type { TemplateData } from '@app-types/screens';
 
-export const PATHWAY_DATA: PathwayData[] = [
+export const TEMPLATE_PATHWAY_DATA: TemplateData[] = [
   {
     id: 'entrepreneurship-2',
     title: 'Entrepreneurship Pathway 2',
@@ -51,4 +51,4 @@ export const PATHWAY_DATA: PathwayData[] = [
   },
 ];
 
-export default PATHWAY_DATA;
+export default TEMPLATE_PATHWAY_DATA;

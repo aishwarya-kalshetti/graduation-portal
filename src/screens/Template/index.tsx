@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Platform } from 'react-native';
-import { ScrollView, Box, Card, HStack, VStack, Text, Pressable, LucideIcon } from '@ui';
+import { ScrollView, Box, Card, HStack, VStack, Text, Pressable, LucideIcon, Button, ButtonText } from '@ui';
 import { useRoute, RouteProp } from '@react-navigation/native';
 import Modal from '@components/ui/Modal';
+import { profileStyles } from '@components/ui/Modal/Styles';
 import Select from '@components/ui/Inputs/Select';
 import idpStyles from './styles';
-import PATHWAY_DATA from '@constants/IDP_PATHWAYS';
-import IDP_CATEGORIES from '@constants/IDP_CATEGORIES';
+import TEMPLATE_PATHWAY_DATA from '@constants/TEMPLATE_PATHWAYS';
+import TEMPLATE_CATEGORIES from '@constants/TEMPLATE_CATEGORIES';
 import { TYPOGRAPHY } from '@constants/TYPOGRAPHY';
 import { theme } from '@config/theme';
 import { getParticipantById } from '../../services/participantService';
@@ -20,14 +20,14 @@ const DevelopInterventionPlan: React.FC = () => {
   const [subcategory, setSubcategory] = useState('');
   const [subOptions, setSubOptions] = useState<string[]>([]);
 
-  type IDPRouteParams = {
-    idp: {
-      participantId?: string;
+  type TemplateRouteParams = {
+    template: {
+      id?: string;
     };
   };
 
-  const route = useRoute<RouteProp<IDPRouteParams, 'idp'>>();
-  const participantId = route.params?.participantId || '';
+  const route = useRoute<RouteProp<TemplateRouteParams, 'template'>>();
+  const participantId = route.params?.id || '';
   const { t } = useLanguage();
   const { isWeb } = usePlatform();
 
@@ -44,8 +44,8 @@ const DevelopInterventionPlan: React.FC = () => {
   }, [isModalOpen]);
 
   useEffect(() => {
-    if (category && IDP_CATEGORIES[category as keyof typeof IDP_CATEGORIES]) {
-      setSubOptions(IDP_CATEGORIES[category as keyof typeof IDP_CATEGORIES]);
+    if (category && TEMPLATE_CATEGORIES[category as keyof typeof TEMPLATE_CATEGORIES]) {
+      setSubOptions(TEMPLATE_CATEGORIES[category as keyof typeof TEMPLATE_CATEGORIES]);
       setSubcategory('');
     } else {
       setSubOptions([]);
@@ -59,17 +59,14 @@ const DevelopInterventionPlan: React.FC = () => {
     }
   };
 
-
-
-
   return (
     <ScrollView {...(idpStyles.scrollView as any)} flexGrow={1} padding="$3" bg="$bgSecondary" contentContainerStyle={{ flexGrow: 1 }}>
       <Box {...(idpStyles.container as any)} flex={1} px="$2" py="$2">
-        {PATHWAY_DATA.map(pathway => (
+        {TEMPLATE_PATHWAY_DATA.map(pathway => (
           <Pressable
             key={pathway.id}
             {...(idpStyles.pressableCard as any)}
-            {...(Platform.OS === 'web' ? {
+            {...(isWeb ? {
               onMouseEnter: () => setHoveredCardId(pathway.id),
               onMouseLeave: () => setHoveredCardId(null),
             } as any : {})}
@@ -145,20 +142,61 @@ const DevelopInterventionPlan: React.FC = () => {
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         headerTitle={t('idp.categoryModal.title')}
+        headerDescription={t('idp.categoryModal.forParticipant', { name: participantName })}
         headerIcon={
           <Box {...(idpStyles.modalHeaderIcon as any)}>
             <LucideIcon name="Briefcase" size={20} color={theme.tokens.colors.primary500} />
           </Box>
         }
-        onConfirm={handleConfirm}
-        confirmButtonText={t('idp.categoryModal.confirmButton')}
-        cancelButtonText={t('idp.categoryModal.cancelButton')}
-        isConfirmDisabled={!category || !subcategory}
-        footerButtonsDirection="vertical"
+        footerContent={
+          <Box
+            flexDirection="column-reverse"
+            sx={{
+              '@md': {
+                flexDirection: 'row',
+                justifyContent: 'flex-end',
+              },
+            }}
+            width="$full"
+            justifyContent="center"
+            gap="$3"
+          >
+            <Button
+              {...profileStyles.cancelButton}
+              width="$full"
+              sx={{
+                '@md': {
+                  width: 'auto',
+                },
+              }}
+              onPress={() => setIsModalOpen(false)}
+            >
+              <ButtonText color={theme.tokens.colors.textPrimary} {...TYPOGRAPHY.button}>
+                {t('idp.categoryModal.cancelButton')}
+              </ButtonText>
+            </Button>
+            <Button
+              {...profileStyles.confirmButton}
+              variant={'solid'}
+              width="$full"
+              sx={{
+                '@md': {
+                  width: 'auto',
+                },
+              }}
+              bg={theme.tokens.colors.primary500}
+              onPress={handleConfirm}
+              $hover-bg={theme.tokens.colors.primary500}
+              isDisabled={!category || !subcategory}
+            >
+              <ButtonText color={theme.tokens.colors.modalBackground} {...TYPOGRAPHY.button}>
+                {t('idp.categoryModal.confirmButton')}
+              </ButtonText>
+            </Button>
+          </Box>
+        }
         size={isWeb ? 'md' : 'lg'}
         maxWidth={isWeb ? undefined : 430}
-        headerLayout="horizontal"
-
       >
         <VStack gap="$1">
           <Text
@@ -174,7 +212,7 @@ const DevelopInterventionPlan: React.FC = () => {
               {t('idp.categoryModal.categoryLabel')}
             </Text>
             <Select
-              options={Object.keys(IDP_CATEGORIES)}
+              options={Object.keys(TEMPLATE_CATEGORIES)}
               value={category}
               onChange={(v) => setCategory(v)}
               placeholder={t('idp.categoryModal.categoryPlaceholder')}
@@ -216,7 +254,7 @@ const DevelopInterventionPlan: React.FC = () => {
             </Box>
           )}
         </VStack>
-      </Modal>
+      </Modal >
       {/* </Box> */}
     </ScrollView >
   );

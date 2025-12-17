@@ -41,48 +41,27 @@
   "projectPlayer": {
     "status": "Status",
     "progress": "Progress",
-    "pillar": "Pillar",
-    "pillars": "pillars",
-    "complete": "complete",
-    "stepsComplete": "Steps Complete",
-    "addTaskToPillar": "Add Task to This Pillar",
     "statusTypes": {
       "to-do": "To Do",
       "completed": "Completed"
     },
     "completeForm": "Complete Form",
-    "uploadFile": "Upload File",
-    "updateProfile": "Update Profile",
-    "viewTask": "View Task",
     "attachments": "Attachments",
     "uploading": "Uploading...",
     "clickToUpload": "📎 Click to upload files",
     "maxFileSize": "Max file size: {{size}}MB",
     "fileSizeError": "Some files exceed the maximum size of {{maxSize}}MB. Please choose smaller files.",
     "uploadFailed": "Upload failed. Please try again.",
-    "uploadSuccess": "Files uploaded successfully!",
     "uploadedFiles": "Uploaded Files",
     "observationForm": "Observation Form",
     "formId": "Form ID",
     "formFieldsPlaceholder": "Form fields will be rendered here",
     "submit": "Submit",
     "addCustomTask": "Add Custom Task",
-    "addCustomTaskSubtitle": "Create a custom task for this participant's intervention plan",
-    "editCustomTask": "Edit Custom Task",
-    "editCustomTaskSubtitle": "Update the details of this custom task",
-    "addTaskToPillar": "Add Task to This Pillar",
-    "selectPillar": "Select Pillar",
-    "selectPillarPlaceholder": "Choose a pillar for this task",
     "taskName": "Task Name",
-    "taskNamePlaceholder": "e.g., Complete housing application",
     "enterTaskName": "Enter task name",
-    "instructions": "Instructions",
-    "instructionsPlaceholder": "Provide detailed instructions for this task...",
     "description": "Description",
     "enterTaskDescription": "Enter task description",
-    "serviceProviderSelection": "Service Provider Selection (Optional)",
-    "serviceProvider": "Service Provider",
-    "selectServiceProvider": "Select service provider...",
     "taskType": "Task Type",
     "taskTypes": {
       "simple": "Simple",
@@ -91,21 +70,8 @@
       "project": "Project"
     },
     "addTask": "Add Task",
-    "chooseUploadMethod": "Choose Upload Method",
-    "uploadDocumentationFor": "Upload consent documentation for {{name}}",
-    "takePhoto": "Take a Photo",
-    "useDeviceCamera": "Use your device camera",
-    "uploadFromDevice": "Upload from Device",
-    "chooseFromGallery": "Choose from gallery or files",
-    "uploadSignedDocumentation": "Upload signed consent documentation for program enrollment.",
-    "uploadConsent": "Upload Consent",
-    "uploadSLA": "Upload SLA",
-    "completeProfile": "Complete Profile",
     "tasks": "tasks",
-    "updateTask": "Update Task",
-    "deleteTask": "Delete Task",
-    "confirmDeleteTask": "Are you sure you want to delete '{{taskName}}'? This action cannot be undone.",
-    "taskDeleted": "Task deleted successfully"
+    "complete": "complete"
   },
   "navigation": {
     "menu": "Menu",
@@ -123,7 +89,7 @@
   "languages": {
     "en": "English",
     "ar": "العربية",
-    "es": "Spanish",
+    "es": "Español",
     "hi": "हिन्दी"
   },
   "admin": {
@@ -186,7 +152,8 @@
       "participantsAllLevels": "Participants (all levels)",
       "linkageChampions": "Linkage Champions (supervisors+)",
       "otherSupervisors": "Other supervisors (admin only)"
-    }
+    },
+    "idp": "Templates"
   },
   "brand": {
     "primaryName": "brac",
@@ -222,9 +189,7 @@
     "myLearningProgressDescription": "Access training materials, track your professional development",
     "connectWithExperts": "Connect with Experts",
     "connectWithExpertsDescription": "Get support, ask questions, and connect with specialists",
-    "getStarted": "Get started",
-    "dashboard": "Dashboard",
-    "dashboardDescription": "View your dashboard and get a quick overview of your progress"
+    "getStarted": "Get started"
   },
   "participantDetail": {
     "notFound": {
@@ -266,122 +231,9 @@
       "assessmentSurveys": "Assessment Surveys"
     },
     "interventionPlan": {
-      "noPlanAssigned": "No intervention plan has been assigned yet.",
-      "noPlanDescription": "Develop a personalized intervention plan to support this participant's goals.",
-      "developPlan": "Develop Intervention Plan",
-      "submitInterventionPlan": "Submit Intervention Plan",
-      "socialEmpowerment": {
-        "session1": {
-          "name": "Organize & Schedule training on social empowerment sessions: Session 1 - Emotional Self Awareness",
-          "description": "Coordinate with service provider to schedule and organize Emotional Self Awareness training session for participant."
-        },
-        "session2": {
-          "name": "Organize & Schedule training on social empowerment sessions: Session 2 - Self Management",
-          "description": "Coordinate with service provider to schedule and organize Self Management training session for participant."
-        },
-        "session3": {
-          "name": "Organize & Schedule training on social empowerment sessions: Session 3 - Relationships",
-          "description": "Coordinate with service provider to schedule and organize Relationship training session for participant."
-        },
-        "session4": {
-          "name": "Organize & Schedule training on social empowerment sessions: Session 4 - Social Awareness",
-          "description": "Coordinate with service provider to schedule and organize Social Awareness training session for participant."
-        },
-        "session5": {
-          "name": "Organize & Schedule training on social empowerment sessions: Session 5 - Communication Skills",
-          "description": "Coordinate with service provider to schedule and organize Communication Skills training session for participant."
-        },
-        "session6": {
-          "name": "Organize & Schedule training on social empowerment sessions: Session 6 - Time Setting",
-          "description": "Coordinate with service provider to schedule and organize Time Setting training session for participant."
-        },
-        "session7": {
-          "name": "Organize & Schedule training on social empowerment sessions: Session 7 - Family Support",
-          "description": "Coordinate with service provider to schedule and organize Family Support training session for participant."
-        },
-        "session8": {
-          "name": "Organize & Schedule training on social empowerment sessions: Session 8 - Positive Family Communication",
-          "description": "Coordinate with service provider to schedule and organize Positive Family Communication training session for participant."
-        },
-        "session9": {
-          "name": "Organize & Schedule training on social empowerment sessions: Session 9 - Parent's involvement in schooling",
-          "description": "Coordinate with service provider to schedule and organize Parent's involvement in schooling training session for participant."
-        },
-        "session10": {
-          "name": "Organize & Schedule training on social empowerment sessions: Session 10 - Decision Making",
-          "description": "Coordinate with service provider to schedule and organize Decision Making training session for participant."
-        },
-        "session11": {
-          "name": "Organize & Schedule training on social empowerment sessions: Session 11 - Problem Solving",
-          "description": "Coordinate with service provider to schedule and organize Problem Solving training session for participant."
-        }
-      },
-      "livelihoods": {
-        "session1": {
-          "name": "Organize and schedule business skills training: Session 1 - Business idea",
-          "description": "Coordinate with service provider to schedule and organize Business Idea training session for participant."
-        },
-        "session2": {
-          "name": "Organize and schedule business skills training: Session 2 - Business finances",
-          "description": "Coordinate with service provider to schedule and organize Business Finances training session for participant."
-        },
-        "session3": {
-          "name": "Organize and schedule business skills training: Session 3 - Marketing and Communications",
-          "description": "Coordinate with service provider to schedule and organize Marketing and Communications training session for participant."
-        },
-        "session4": {
-          "name": "Organize and schedule business skills training: Session 4 - Formalization",
-          "description": "Coordinate with service provider to schedule and organize business Formalization training session for participant."
-        },
-        "generateBusinessIdea": {
-          "name": "Generate Business Idea",
-          "description": "Work with participant to develop and document their business idea with clear description, target market, and value proposition."
-        },
-        "openBankAccount": {
-          "name": "Support participants to open a bank account (if they don't have)",
-          "description": "Assist participant in opening a bank account for their business finances if they do not already have one."
-        },
-        "getBusinessLicense": {
-          "name": "Support participants to get a business license",
-          "description": "Support participant in obtaining necessary business license and registration."
-        },
-        "developBusinessPlan": {
-          "name": "Support participants to develop and submit a formal business plan/application to relevant service provider (if they don't have)",
-          "description": "Assist participant in developing a comprehensive business plan and submitting application to relevant funding or support providers."
-        },
-        "approvalBusinessPlan": {
-          "name": "Approval of business development plan from relevant authorities",
-          "description": "Ensure business development plan receives approval from relevant authorities and service providers."
-        },
-        "procureAssets": {
-          "name": "Procure productive enterprise assets",
-          "description": "Support participant in procuring necessary productive assets and equipment for their business."
-        },
-        "ensureBusinessAssets": {
-          "name": "Ensure that business assets and resources are provided to the participant",
-          "description": "Verify and facilitate delivery of business assets and resources to participant."
-        },
-        "businessTraining": {
-          "name": "Arrange linkages with service providers for business training if required",
-          "description": "Connect participant with appropriate service providers for additional business training as needed."
-        },
-        "businessMentoring": {
-          "name": "Arrange linkages with service providers for business mentoring if required",
-          "description": "Establish connections with qualified business mentors and service providers for ongoing support."
-        },
-        "businessLinkages": {
-          "name": "Arrange linkages for business (Inputs, Market, Tools etc.) wherever required",
-          "description": "Facilitate connections for business inputs, market access, tools, and other resources as required."
-        },
-        "monitorBusiness": {
-          "name": "Monitor business in accordance with the digital platform",
-          "description": "Track and monitor business progress using the digital platform and reporting tools."
-        },
-        "createRecord": {
-          "name": "Create Ad hoc livelihoods support records when required in the DPG",
-          "description": "Create additional livelihood support records in the digital platform as needed based on participant requirements."
-        }
-      }
+      "noPlanAssigned": "No Intervention Plan Assigned",
+      "noPlanDescription": "Pillars and tasks will appear here once an intervention plan is assigned to this participant.",
+      "developPlan": "Develop Intervention Plan"
     },
     "assessmentSurveys": {
       "title": "Assessment Surveys",
@@ -429,7 +281,6 @@
     "inProgress": "In Progress",
     "completed": "Completed",
     "droppedOut": "Dropped out",
-    "graduatedStatus": "Graduated",
     "name": "Name",
     "participantID": "Participant ID",
     "overallProgress": "Overall Progress",
@@ -439,7 +290,7 @@
     "loadingParticipants": "Loading participants...",
     "dashboardComingSoon": "Dashboard coming soon...",
     "showingParticipants": "Showing {{count}} of {{total}} participants",
-    "graduated": "Ready to Graduate"
+    "graduated": "Graduated"
   },
   "idp": {
     "categoryModal": {
@@ -472,27 +323,6 @@
     "dropoutReasonLabel": "Reason for Dropout",
     "dropoutReasonPlaceholder": "Enter reason for dropout...",
     "dropoutHint": "This will change the participant's status to \"Not Onboarded\" and log the action in their history."
-  },
-  "lcProfile": {
-    "myProfile": "My Profile",
-    "linkageChampionProfile": "Linkage Champion Profile",
-    "profileDetails": "Profile Details",
-    "fullName": "Full Name",
-    "lcId": "LC ID",
-    "emailAddress": "Email Address",
-    "phoneNumber": "Phone Number",
-    "serviceArea": "Service Area",
-    "startDate": "Start Date",
-    "languagePreference": "Language Preference",
-    "programStatistics": "Program Statistics",
-    "activeParticipants": "Active Participants",
-    "completedIdps": "Completed IDPs",
-    "visitsLogged": "Visits Logged",
-    "pendingTasks": "Pending Tasks",
-    "certificationsTraining": "Certifications & Training",
-    "completed": "Completed",
-    "certified": "Certified",
-    "notes": "Notes"
   },
   "lc": {
     "menu": {
