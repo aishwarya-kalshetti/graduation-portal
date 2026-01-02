@@ -69,6 +69,7 @@ export default function ParticipantDetail() {
   const { t } = useLanguage();
   const { showAlert } = useAlert();
   const { isWeb } = usePlatform();
+
   // Extract the id parameter from the route
   const participantId = route.params?.id;
 
@@ -187,16 +188,16 @@ export default function ParticipantDetail() {
                   <Box width="$full">
                     {activeTab ===
                       PARTICIPANT_DETAILS_TABS.INTERVENTION_PLAN && (
-                      <InterventionPlan
-                        participantStatus={status as ParticipantStatus}
-                      />
-                    )}
+                        <InterventionPlan
+                          participantStatus={status as ParticipantStatus}
+                        />
+                      )}
                     {activeTab ===
                       PARTICIPANT_DETAILS_TABS.ASSESSMENTS_SURVEYS && (
-                      <AssessmentSurveys
-                        participantStatus={status as ParticipantStatus}
-                      />
-                    )}
+                        <AssessmentSurveys
+                          participantStatus={status as ParticipantStatus}
+                        />
+                      )}
                   </Box>
                 </Box>
               </Box>
