@@ -288,4 +288,5 @@ const ProjectComponent: React.FC = () => {
     </Container>
   );
 };
+
 export default ProjectComponent;

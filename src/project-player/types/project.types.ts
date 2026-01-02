@@ -1,8 +1,4 @@
-import {
-  TASK_STATUS,
-  PROJECT_STATUS,
-  UPLOAD_STATUS,
-} from '../../constants/app.constant';
+import {TASK_STATUS,PROJECT_STATUS,UPLOAD_STATUS,} from '../../constants/app.constant';
 
 export type TaskStatus = (typeof TASK_STATUS)[keyof typeof TASK_STATUS];
 

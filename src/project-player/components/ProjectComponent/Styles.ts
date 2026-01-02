@@ -184,3 +184,4 @@ export const projectInfoCardStyles = {
     alignItems: 'flex-end' as const,
   },
 } as const;
+
